@@ -37,7 +37,7 @@ routing  -->  routes banaane ke process ko hum kahte hai routing
 /profile/himanshu/about-us/
 
 
-middleware  ek aise function hota hai jo har route se pahle chalta hai iska matlab sarre routes mein koi bhi chale usee pahle middleware chalta hua 
+middleware  ek aise function hota hai jo har route se pahle chalta hai iska matlab sarre routes mein koi bhi chale usee pahle middleware chalta hai and usmein likha code pahle execute hota hai
 
 
 Middleware ek programming concept hai jo software applications mein use hota hai. Middleware, application ke various components ke beech communication aur data processing ko handle karta hai. Ye components, jese ki server-side logic, databases, aur clients, ke beech communication aur interaction ko facilitate karta hai.
@@ -81,11 +81,73 @@ app.listen(3000, () => {
 
 
 ```
+req - data lena gaya 
+res - lekar aaya data 
+next () - run th next program
+
 
 
 request and response 
+
+req mein saara data hota hai aane waale user ki request ki taraf ka , jaise ki uski location device info and other things 
+
+
+res mein controls hota hai jinke basis pe hum server se response bhje paate hai 
+request 
+
+
+next thing which should be executed 
+
 route parameters 
-template engines 
+- to make any  route dynamic you can use :at the place you want to make it dynamic and to access there value use req.params
+
+
+/author/books/issued/harsh
+/author/books/issued/harshooo
+/author/books/issued/harshpppppp
+
+
+```
+
+app.get('/profile/:username', function (req, res) {
+    res.send(`hello from ${req.params.username}`)
+  })
+
+```
+
+template engines  :> 
+
+### ejs :
+
+
+html - 2+ 3 = 2 +3 
+ejs - 2+ 3 = 5
+dynamic version html  
+
+
+ejs setup karne ke liya 
+
+
+1) ejs install 
+
+npm i ejs 
+
+2) configure ejs 
+
+app.set("view engine ", "ejs");
+
+3) ek views folder banao
+
+
+4) us mein ejs files banao 
+
+5 send ki jagah render karo -> render karte waqt make sure app view folder ke andar waali hi koi file kaa naam likhein , aur render fnf ejs mention na kare 
+
+
+
+
 static files 
 http  methods  - get post 
 error handling 
+
+
