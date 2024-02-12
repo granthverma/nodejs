@@ -148,6 +148,17 @@ app.set("view engine ", "ejs");
 
 static files 
 http  methods  - get post 
+
+
+
+1. Handling GET Requests:
+Use app.get to define routes that respond to GET requests. In the example, accessing the root URL (/) triggers a simple response.
+
+2. Handling POST Requests:
+Employ app.post to handle POST requests. Ensure you include middleware like express.json() to parse JSON data in the request body.
+
+3. Accessing Data from POST Requests:
+Inside the POST request handler, use req.body to access data sent in the request body.
 error handling 
 
 
